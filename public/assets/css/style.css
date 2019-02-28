@@ -1,0 +1,40 @@
+.titleText {
+    text-align: center;
+    color: gold;
+    font-size: 60px;
+    font-family: 'Skranji', cursive;
+    margin-top: 2%;
+}
+
+.miniHeading {
+    color: black;
+    text-align: center;
+    font-family: 'Cabin Condensed', sans-serif;
+}
+
+.addBurger {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.krabbyPatty {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    background-color: url(../images/bikinibottom.gif);
+}
+
+.moveMe {
+    text-align: center;
+    margin: 0 auto 3% 0;
+
+}
+
+h5 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
