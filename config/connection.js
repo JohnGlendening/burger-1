@@ -9,7 +9,6 @@ var connection;
 //   database: "burgers_db"
 // });
 
-var connection;
 if(process.env.JAWSDB_URL) {            
     connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
