@@ -1,9 +1,13 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-12">
+               <br>
+                  <br>
             <h1 class="titleText">Eat Da Burger</h1>
+            <br>
+        
             <hr>
-            <img class="krabbyPatty" src="/public/assets/images/Krabby_Patty_transparentpng.png">
+            <img src="/public/assets/images/patty.jpg">
             <hr>
         </div>
     </div>
@@ -24,34 +28,40 @@
     <div class="row">
         <div class="col-6 burgers">
             <h3 class="miniHeading">stars of the show! </h3>
+            <br>
             <ul>
                 {{#each burgers}}
                 {{#unless this.devoured}}
                 <div class="showBurger">
-                    <h5>
-                        {{this.burger_name}}</h5>
+                    <p>
+                        {{this.burger_name}}</p>
                     <form action="/updateOne/{{this.id}}" method="POST">
                         <input type="hidden" name="devoured" value="1">
-                        <button type="submit" class="btn btn-success" style="background-color:rgb(48, 48, 119);">eat da burger!</button>
+                        <button type="submit" class="btn" style="background-color: #5DBCD2 ;">eat da burger!</button>
                     </form>
+                    <br>
                 </div>
                 {{/unless}}
-                {{/each}}∫
+                {{/each}}
             </ul>
         </div>
         <div class="col-6 devoured">
             <h3 class="miniHeading">burgers devoured</h3>
+            <br>
             <ul>
                 {{#each burgers}}
-                {{#if this.devoured}}<h5>
-                    {{this.burger_name}}</h5>
+                {{#if this.devoured}}
+                <div class="devourBurger">
+                <p>
+                    {{this.burger_name}}</p>
                 <form action="/deleteOne/{{this.id}}" method="POST">
-                    <button type="submit" class="btn btn-danger"
-                        style="background-color:rgb(116, 13, 13);">delete da burger! </button>
+                    <button type="submit" class="btn"
+                        style="background-color: #5DBCD2 ;">delete da burger! </button>
                 </form>
                 {{/if}}
                 {{/each}}
             </ul>
+            </div>
         </div>
     </div>
     <hr>
